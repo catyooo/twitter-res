@@ -1,8 +1,5 @@
 $(function() {
 	/* yoniu themme */
-	$('#mobile-nav, .mobile-nav').click(function(){  
-		$("#left").toggleClass('showtime');
-	});
     $('#a-post-text').toggle(
 		function() {
 			$(".a-post-content").attr("style","font-size: 20px;");
@@ -198,6 +195,10 @@ function _load_baguetteBox(iii = false){
 	$('form.protected').each(function(){
 		$(this).append('<i class="fa fa-lock"></i>');
 		$(this).find('input.text').attr('placeholder','文章已加密，请输入密码');
+	});
+	$('#mobile-nav, .mobile-nav, #main.hidetime').click(function(){  
+		$("#left").toggleClass('showtime');
+		$("#main").toggleClass('hidetime');
 	});
 }
 function lazy_load(){
